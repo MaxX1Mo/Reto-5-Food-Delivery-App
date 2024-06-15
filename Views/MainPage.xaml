@@ -147,8 +147,37 @@
             </Grid>
             <Image Grid.Column="1"
                    Aspect="Fill"
-                   Source="burger.png"/>
+                   Source="burgr.jpg"/>
         </Grid>
+        <Grid Grid.Row="3"
+               Margin="20,10,0,0"
+               RowDefinitions=".3*,.7*">
+            <Label FontFamily="RobotoB"
+                   FontSize="18"
+                   Text="Ingredients"
+                   TextColor="{StaticResource Gray100}"
+                   VerticalTextAlignment="Center"/>
+            <Label 
+                Grid.Row="1"
+                FontFamily="RobotoL"
+                LineHeight="1.3"
+                Text="Two flame-grilled beef patties with crispy bacon, melted American cheese, ketchup, and creamy mayonnaise on a toasted sesame seed bun."
+                TextColor="{StaticResource Gray200}"
+                VerticalTextAlignment="Center"/>
+
+        </Grid>
+        <Button Grid.Row="4"
+                Margin="15,0"
+                BackgroundColor="#ffc71f"
+                CornerRadius="30"
+                FontAttributes="Bold"
+                FontFamily="RobotoR"
+                FontSize="18"
+                HeightRequest="50"
+                Text="Add to Cart"
+                TextColor="Black"/>
+
+
     </Grid> 
 
 </ContentPage>
