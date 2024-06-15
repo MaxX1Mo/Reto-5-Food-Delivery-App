@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Reto_5_Food_Delivery_App.MainPage"
+             BackgroundColor="{StaticResource Gray900}"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:rating="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs">
+    <Grid RowDefinitions=".1*,.1*,.55*,.15*,.15*">
+        <Grid ColumnDefinitions="*,*,*" Margin="20">
+            <Image HorizontalOptions="Start" VerticalOptions="Center">
+                <Image.Source>
+                    <FontImageSource FontFamily="Icons" 
+                     Glyph="&#xE802;"
+                     Size="20"
+                     Color="{StaticResource Gray200}"/>
+                </Image.Source>
+            </Image>
+            <Label Grid.Column="1"
+                   FontFamily="RobotoR"
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"
+                   Text="Food Detail"
+                   TextColor="{StaticResource Gray200}"
+                   VerticalOptions="Center"/>
+            <Image Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center">
+                <Image.Source>
+                    <FontImageSource FontFamily="Icons" 
+                     Glyph="&#xE800;"
+                     Size="20"
+                     Color="{StaticResource Gray200}"/>
+                </Image.Source>
+            </Image>
+
+        </Grid>
+        <Label Grid.Row="1"
+               Margin="20,10,0,0"
+               FontFamily="RobotoB"
+               FontSize="25"
+               Text="Double Smokey Burguer"
+               TextColor="{StaticResource Gray100}"/>
+        <Grid Grid.Row="2"
+              ColumnDefinitions=".3*,.7*">
+            <Grid RowDefinitions="*,*,*,*,*">
+                <RoundRectangle CornerRadius="0,40,0,40" Grid.RowSpan="5" Fill="{StaticResource Gray600}" />
+                <Grid Margin="10,10,0,0" RowDefinitions="*,*,*">
+                    <Label FontFamily="OpenSansRegular"
+                           FontSize="12"
+                           Text="Rate"
+                           TextColor="{StaticResource Gray200}"/>
+                    <Label Grid.Row="1"
+                        FontFamily="OpenSansSemibold"
+                           FontSize="14"
+                           Text="4.8/5 (12,343)"
+                           TextColor="{StaticResource Gray100}"/>
+                    <rating:SfRating
+                        Grid.Row="2"
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="Start"
+                        ItemSize="15"
+                        Precision="Exact"
+                        Value="4.6">
+                        <rating:SfRating.RatingSettings>
+                            <rating:RatingSettings
+                                RatedFill="#ffc71f"
+                                RatedStroke="#ffc71f"
+                                UnratedFill="Gray"
+                                UnratedStroke="Gray"/>
+                        </rating:SfRating.RatingSettings>
+                    </rating:SfRating>
+                        
+                </Grid>
+                <Grid Grid.Row="1"
+                          Margin="10,10,0,0"
+                          RowDefinitions="*,*"
+                          RowSpacing="5">
+                    <Label FontFamily="OpenSansRegular"
+                           FontSize="12"
+                           Text="Delivery Time"
+                           TextColor="{StaticResource Gray200}"
+                           VerticalOptions="End"/>
+                    <HorizontalStackLayout Grid.Row="1"
+                                           Spacing="5">
+                        <Image HorizontalOptions="End" VerticalOptions="Start">
+                            <Image.Source>
+                                <FontImageSource FontFamily="Icons" 
+                                Glyph="&#xE801;"
+                                Size="20"
+                                Color="{StaticResource Gray200}"/>
+                            </Image.Source>
+                        </Image>
+                        <Label FontFamily="OpenSansSemibold"
+                           FontSize="15"
+                           Text="20 mins"
+                           TextColor="{StaticResource Gray100}"
+                           VerticalOptions="Start"/>
+
+                    </HorizontalStackLayout>
+                </Grid>
+                <Grid Grid.Row="2"
+                      Margin="10,10,0,0"
+                      RowDefinitions="*,*"
+                      RowSpacing="5">
+                    <Label FontFamily="OpenSansRegular"
+                           FontSize="12"
+                           Text="Calories"
+                           TextColor="{StaticResource Gray200}"
+                           VerticalOptions="End"/>
+                    <Label Grid.Row="1"
+                        FontFamily="OpenSansSemiBold"
+                           FontSize="14"
+                           Text="1,200 Cal"
+                           TextColor="{StaticResource Gray100}"
+                           VerticalOptions="Start"/>
+                </Grid>
+                <Grid Grid.Row="3"
+                      Margin="10,10,0,0"
+                      RowDefinitions="*,*"
+                      RowSpacing="5">
+                    <Label FontFamily="OpenSansRegular"
+                           FontSize="12"
+                           Text="Branch"
+                           TextColor="{StaticResource Gray200}"
+                           VerticalOptions="End"/>
+                    <Label Grid.Row="1"
+                        FontFamily="OpenSansSemiBold"
+                           FontSize="14"
+                           Text="Creek Road"
+                           TextColor="{StaticResource Gray100}"
+                           VerticalOptions="Start"/>
+                </Grid>
+                <Grid Grid.Row="4"
+                      Margin="10,10,0,0"
+                      RowDefinitions="*,*"
+                      RowSpacing="5">
+                    <Label FontFamily="OpenSansRegular"
+                           FontSize="12"
+                           Text="Price"
+                           TextColor="{StaticResource Gray200}"
+                           VerticalOptions="End"/>
+                    <Label Grid.Row="1"
+                        FontFamily="OpenSansSemiBold"
+                           FontSize="14"
+                           Text="$ 10.99"
+                           TextColor="{StaticResource Gray100}"
+                           VerticalOptions="Start"/>
+                </Grid>
+            </Grid>
+            <Image Grid.Column="1"
+                   Aspect="Fill"
+                   Source="burger.png"/>
+        </Grid>
+    </Grid> 
+
+</ContentPage>
